@@ -41,21 +41,21 @@
     when: option_syncthing_gtk_gui
 
   - name: Syncthing |  configure startup (upstart)
-    template: src="{{role_dir}}/templates/syncthing_upstart.conf.j2" dest="/etc/init/syncthing.conf"
+    template: src="{{role_dir}}/templates/syncthing/syncthing_upstart.conf.j2" dest="/etc/init/syncthing.conf"
     when: upstart_system == "upstart"
     become: yes
     tags:
       - syncthing
 
   - name: Syncthing |  configure startup (systemd)
-    template: src="{{role_dir}}/templates/syncthing_systemd.conf.j2" dest="/etc/systemd/system/syncthing.service" mode=0644
+    template: src="{{role_dir}}/templates/syncthing/syncthing_systemd.conf.j2" dest="/etc/systemd/system/syncthing.service" mode=0644
     when: upstart_system == "systemd"
     become: yes
     tags:
       - syncthing
 
   - name: Syncthing |  configure resume fallback (systemd)
-    template: src="{{role_dir}}/templates/syncthing-resume.service.j2" dest="/etc/systemd/system/syncthing-resume.service" mode=0644
+    template: src="{{role_dir}}/templates/syncthing/syncthing-resume.service.j2" dest="/etc/systemd/system/syncthing-resume.service" mode=0644
     when: upstart_system == "systemd"
     become: yes
     tags:
