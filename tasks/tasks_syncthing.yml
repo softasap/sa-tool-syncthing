@@ -19,7 +19,7 @@
 
   - name: Syncthing | ufw allow syncthing
     shell: ufw allow syncthing
-    when: option_allow_syncthing_ufw
+    when: option_syncthing_allow_ufw
     become: yes
     tags:
       - syncthing
