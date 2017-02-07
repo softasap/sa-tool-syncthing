@@ -62,8 +62,8 @@
       - syncthing
 
   - name: SyncThing | Generate initial config / obtain DeviceID
-    shell: syncthing -generate {{syncthing_home}} | grep INFO:
     become: yes
+    shell: "syncthing -generate {{syncthing_home}} | grep INFO"
     tags:
       - syncthing
     register: device_id_raw
