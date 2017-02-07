@@ -1,4 +1,6 @@
 ---
 # tasks file for sa-tool-syncthing
 
+  - include: __detect_init_system.yml
+
   - include: tasks_syncthing.yml 

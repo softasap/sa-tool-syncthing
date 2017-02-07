@@ -1,5 +1,11 @@
 ---
 # defaults file for sa-tool-syncthing
 
+role_dir: "{{role_path}}"
+
 option_syncthing_allow_ufw: false
 option_syncthing_gtk_gui: false
+
+syncthing_home: "/home/{{deploy_user}}"
+
+deploy_user: "{{ansible_user_id}}"
