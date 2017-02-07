@@ -1,0 +1,4 @@
+[submodule "roles/sa-tool-syncthing"]
+        path = roles/sa-tool-syncthing
+        url = https://github.com/softasap/sa-tool-syncthing.git
+

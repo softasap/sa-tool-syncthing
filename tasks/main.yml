@@ -1,0 +1,4 @@
+---
+# tasks file for sa-tool-syncthing
+
+  - include: tasks_syncthing.yml 
